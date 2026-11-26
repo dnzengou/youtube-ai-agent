@@ -1,6 +1,8 @@
-# YouTube AI Agent — Product Spec
+# Veriscope — Product Spec
 
-**One-liner.** An agent-native layer on top of YouTube: structured, MCP-ready video data that other agents can consume, with a thin human app on the same core for summarize/chat and content repurposing.
+**Brand.** Veriscope (`veriscope.ai` target). *Veri* + *scope*: the agent's verifiable lens on video. A Desired Solutions venture (Agent Economy track).
+
+**One-liner.** An agent-native layer on top of YouTube: structured, MCP-ready, signed video data that other agents can consume — with a thin human app on the same core for chat and content repurposing.
 
 **Why this order.** The agent feed is the moat and the SEO/GEO story (agent-detectable, verifiable, cite-able). The human app is a wrapper that proves the feed works and monetizes it. Building feed first means the human features are ~50% free.
 
@@ -103,12 +105,21 @@ Single points of failure removed by design: AI Gateway means no hard provider lo
 
 ---
 
-## 5. Pricing (low-hanging commercial)
+## 5. Pricing — API-first, usage-based (with human-app seats on top)
 
-- **Free:** 3 videos / day, watermark on outputs, no API.
-- **Creator (€12/mo):** 100 videos/mo, all repurpose outputs, no watermark.
-- **Agent (€29/mo):** API + MCP, 10k calls/mo, signed responses.
-- **Team (€79/mo):** 5 seats, shared workspaces, priority queue.
+Primary motion: metered API/MCP. Agents consume units; revenue compounds with consumption (DS compound-revenue doctrine, RRSS → ARM).
+
+**Usage units (one price for both API and human-app actions):**
+- 1 unit = 1 ingest OR 1 generation OR 100 search calls OR 1k MCP tool calls.
+- Transparent dashboard, hard cap toggle, prepaid credits.
+
+**Plans:**
+- **Free:** 50 units/mo, watermarked outputs, public share pages only, no signed responses.
+- **Pay-as-you-go:** €0.02 / unit, signed responses, no seat limit on API.
+- **Studio (€29/mo + usage):** 1,500 units included, lower overage (€0.015), API keys, webhooks.
+- **Team seat add-on (€12/seat/mo):** human app, shared workspaces, digest emails. Layered on any paid plan.
+
+Why this over flat seats: agents are the primary buyer, their spend scales with their own product's traction (compound), and the seat add-on captures the human workflow without becoming the primary gate.
 
 Low-hanging revenue hooks implemented day 1:
 - Public share pages for every generated output (viral loop, back-links for SEO).
@@ -143,10 +154,8 @@ Low-hanging revenue hooks implemented day 1:
 
 ---
 
-## 8. Open questions for you
+## 8. Decisions locked
 
-1. Brand name — keep `youtube-ai-agent` or rebrand?
-2. Primary monetization — self-serve seats (above) or usage-based API-first?
-3. Steward personality — neutral utility voice, or in the Desired Solutions brand voice?
-
-Answer those and I start on step 1.
+- **Name:** Veriscope.
+- **Monetization:** API-first usage-based + optional human-app seat add-on.
+- **Steward voice:** Desired Solutions brand voice (loaded via `ds-brand-voice` skill when writing copy).

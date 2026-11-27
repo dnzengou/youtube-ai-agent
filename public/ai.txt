@@ -1,0 +1,9 @@
+# ai.txt — Veriscope
+# Policy for AI agents and model trainers.
+
+User-agent: *
+Retrieval: allow            # agents may fetch VideoDocs via API/MCP under plan limits
+Training: ask               # contact hello@desiredsolutions.me for training-use licenses
+Attribution: required       # cite source_video_id and timestamp
+Signing: available          # Ed25519-signed responses on paid plans
+Contact: hello@desiredsolutions.me

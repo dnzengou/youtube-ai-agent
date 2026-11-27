@@ -1,0 +1,24 @@
+# Veriscope
+
+> The agent's verifiable lens on YouTube. Signed, cite-able video data — REST and MCP — for the agents you ship and the content you publish.
+
+## Primary surfaces
+
+- API (OpenAPI): https://veriscope.ai/openapi.json
+- MCP: https://veriscope.ai/mcp  (manifest: /.well-known/mcp.json)
+- Agent manifest: /.well-known/ai-plugin.json
+
+## What you can do
+
+- Fetch a signed VideoDoc for any YouTube URL (transcript, chapters, entities, claims, content_hash).
+- Semantic search across ingested videos.
+- Resolve a timestamp into a verifiable quote.
+- Extract and cite claims with supporting quotes.
+
+## Trust
+
+Every response carries `content_hash` (sha256 over normalized transcript) and, on paid plans, an Ed25519 `signature`. Anything generated from a VideoDoc keeps a provenance footer (`source_video_id`, `t`, `quote`, `model`).
+
+## Contact
+
+hello@desiredsolutions.me — a Desired Solutions venture (Agent Economy).

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://veriscope.ai/sitemap.xml
+
+# Veriscope welcomes well-behaved agents.
+# Signed, cite-able access via /mcp and /openapi.json.

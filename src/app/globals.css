@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 247 247 245;
+  --fg: 11 13 16;
+  --accent: 26 108 255;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: 11 13 16;
+    --fg: 247 247 245;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: 11 13 16;
+  --fg: 247 247 245;
+}
+
+html, body { background: rgb(var(--bg)); color: rgb(var(--fg)); }
+body { font-feature-settings: "ss01", "cv11"; }
